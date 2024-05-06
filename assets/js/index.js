@@ -4,6 +4,10 @@ gridSizeButton.addEventListener('click', () => {
     
     const gridSize = parseInt(prompt('Please enter grid size'))
     
+    if (container.hasChildNodes()) {
+        container.innerHTML = ''
+    }
+
     for (let i = 0; i < gridSize; i++) {
         const row = document.createElement('div')
         row.classList.add('row')
